@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :index]
+  before_action :set_post, only: %I[show edit update destroy]
+  before_action :authenticate_user!, except: %I[show index]
 
   # GET /posts
   # GET /posts.json
@@ -20,8 +20,7 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /posts
   # POST /posts.json
@@ -64,17 +63,18 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def post_params
-      params.fetch(:post, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post
+    @post = Post.find(params[:id])
+  end
 
-    def post_sanitize_params
-      params.require(:post).permit(:title, :body, :user_id)
-    end
+  # Only allow a list of trusted parameters through.
+  def post_params
+    params.fetch(:post, {})
+  end
+
+  def post_sanitize_params
+    params.require(:post).permit(:title, :body, :user_id)
+  end
 end
