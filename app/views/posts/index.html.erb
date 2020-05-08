@@ -14,10 +14,10 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.title %></td>
-        <% if user_signed_in? %>
-          <span>, Author: <%= post.user.username %> </span>
-        <% end %>
+        <td><%= post.title %> <% if user_signed_in? %>
+          <span class= "author" >,author:<%= post.user.username %> </span>
+        <% end %></td>
+        
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path , class:"button" %>

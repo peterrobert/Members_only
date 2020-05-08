@@ -7,22 +7,28 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+    <div class="top-margin"></div>
+    <div class="top_bar">
     <% if user_signed_in? %>
+     
       <span> <%= current_user.email %> </span>
       <%= link_to  "Sign out", destroy_user_session_path, method: :delete %>
       <br>
-      <% if current_user.is_member %>
-        <p>is member </p>
-      <% end %>
     <% else %>
       <%= link_to "Sign up", new_user_registration_path %>
       <%= link_to "Sign in", new_user_session_path %>
+
     <% end %>
+     
+     </div>
+    
     <%= yield %>
   </body>
 </html>

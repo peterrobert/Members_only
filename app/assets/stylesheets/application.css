@@ -13,3 +13,100 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+
+    overflow-x: hidden;
+  }
+
+  .top-margin{
+
+      height: 20px;
+  }
+
+ .top_bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: #eee;
+    padding: 20px;
+ }
+
+ a{
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none;
+ }
+
+ table {
+    margin: 0 auto;
+    border: 1px solid #b5b0b0;
+    margin-bottom: 20px;
+ }
+
+h1{
+    padding-bottom: 20px;
+    padding-top: 20px;
+   text-align: center;
+  }  
+
+  td {
+    font-size: 20px;
+    color: #f5aa22;
+    font-weight: 800;
+  }
+
+  table a {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .button{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 110px;
+    background-color: orange;
+    color: #fff;
+    border-radius: 20px;
+  }
+
+  .new_post_form{
+    text-align: center;
+  }
+
+  .new_post_form input{
+    width: 30%;
+    border: 2px solid orange;
+    border-radius: 10px;
+    outline: none;
+  }
+
+  .new_post_form #post_title{
+    height: 25px;
+  }
+
+  .new_post_form #post_body{
+    height: 230px;
+    width: 30%;
+    border: 2px solid orange;
+    border-radius: 10px;
+    outline: none;
+  }
+
+  .new_post_form .actions input{
+    background: #f5aa22;
+    color: #fff;
+    width: 150px;
+    border-radius: 20px;
+    height: 34px;
+    cursor: pointer;
+  }
+
+ .author{
+    color: #81985c;
+ }
