@@ -14,99 +14,120 @@
  *= require_self
  */
 
- body {
+body {
+  overflow-x: hidden;
+}
 
-    overflow-x: hidden;
-  }
+.top-margin {
+  height: 20px;
+}
 
-  .top-margin{
+.top_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: #eee;
+  padding: 20px;
+}
 
-      height: 20px;
-  }
+a {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 10px;
+  text-decoration: none;
+}
 
- .top_bar{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: #eee;
-    padding: 20px;
- }
+table {
+  margin: 0 auto;
+  border: 1px solid #b5b0b0;
+  margin-bottom: 20px;
+}
 
- a{
-    font-family: 'Ubuntu', sans-serif;
-    text-transform: uppercase;
-    font-size: 16px;
-    padding: 10px;
-    text-decoration: none;
- }
+h1 {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+}
 
- table {
-    margin: 0 auto;
-    border: 1px solid #b5b0b0;
-    margin-bottom: 20px;
- }
+td {
+  font-size: 20px;
+  color: #f5aa22;
+  font-weight: 800;
+}
 
-h1{
-    padding-bottom: 20px;
-    padding-top: 20px;
-   text-align: center;
-  }  
+table a {
+  font-size: 14px;
+  font-weight: 400;
+}
 
-  td {
-    font-size: 20px;
-    color: #f5aa22;
-    font-weight: 800;
-  }
+.button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 110px;
+  background-color: orange;
+  color: #fff;
+  border-radius: 20px;
+}
 
-  table a {
-    font-size: 14px;
-    font-weight: 400;
-  }
+.new_post_form {
+  text-align: center;
+}
 
-  .button{
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    width: 110px;
-    background-color: orange;
-    color: #fff;
-    border-radius: 20px;
-  }
+.new_post_form input {
+  width: 30%;
+  border: 2px solid orange;
+  border-radius: 10px;
+  outline: none;
+}
 
-  .new_post_form{
-    text-align: center;
-  }
+.new_post_form #post_title {
+  height: 25px;
+}
 
-  .new_post_form input{
-    width: 30%;
-    border: 2px solid orange;
-    border-radius: 10px;
-    outline: none;
-  }
+.new_post_form #post_body {
+  height: 230px;
+  width: 30%;
+  border: 2px solid orange;
+  border-radius: 10px;
+  outline: none;
+}
 
-  .new_post_form #post_title{
-    height: 25px;
-  }
+.new_post_form .actions input {
+  background: #f5aa22;
+  color: #fff;
+  width: 150px;
+  border-radius: 20px;
+  height: 34px;
+  cursor: pointer;
+}
 
-  .new_post_form #post_body{
-    height: 230px;
-    width: 30%;
-    border: 2px solid orange;
-    border-radius: 10px;
-    outline: none;
-  }
+.author {
+  color: #81985c;
+}
 
-  .new_post_form .actions input{
-    background: #f5aa22;
-    color: #fff;
-    width: 150px;
-    border-radius: 20px;
-    height: 34px;
-    cursor: pointer;
-  }
+.post-fields {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
 
- .author{
-    color: #81985c;
- }
+.post-fields > p {
+  padding: 20px;
+  border: 1px solid lightgray;
+}
+
+.post-commands {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.new_user,
+.actions,
+.ta-c,
+h2 {
+  text-align: center;
+}
