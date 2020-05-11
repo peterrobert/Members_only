@@ -18,20 +18,6 @@ body {
   overflow-x: hidden;
 }
 
-.top-margin {
-  height: 20px;
-}
-
-.top_bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: #eee;
-  padding: 20px;
-}
-
 a {
   font-family: "Ubuntu", sans-serif;
   text-transform: uppercase;

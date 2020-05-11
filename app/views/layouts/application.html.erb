@@ -8,16 +8,22 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    # ==== Google fonts ====
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if flash[:notice] %>
 
-    <div class="top-margin"></div>
+        <p class="notice"><%= notice %></p>
+
+    <% end %>
+
+    <% if flash[:alert] %>
+
+        <p class="alert"><%= alert %></p>
+
+    <% end %>
+
     <div class="top_bar">
     <% if user_signed_in? %>
      
