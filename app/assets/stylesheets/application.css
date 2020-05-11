@@ -28,7 +28,7 @@
     text-transform: capitalize;
   }
 
-  .app_header h2{
+  h2{
     font-family: "Ubuntu", sans-serif;
     text-transform: uppercase;
     font-weight: bold;
@@ -39,8 +39,14 @@
     height: 380px;
   }
 
+  .create_post img{
+    margin-top: -50px;
+    height: 380px;
+  }
+
   .top_bar button {
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .top_bar button a{
@@ -67,15 +73,27 @@ h1 {
   text-align: center;
 }
 
-td {
-  font-size: 20px;
-  color: #f5aa22;
-  font-weight: 800;
+.card-text{
+  max-height: 148px;
+  overflow-y: scroll;
 }
 
-table a {
-  font-size: 14px;
-  font-weight: 400;
+.card-body{
+  position: relative;
+}
+
+.card-body button {
+  position: absolute;
+    bottom: 10px;
+}
+
+.btn .card-link{
+    position: relative;
+     margin-bottom: 0;
+}
+
+.style_up{
+  padding-bottom: 20px;
 }
 
 .button {
@@ -88,6 +106,10 @@ table a {
   border-radius: 20px;
 }
 
+.card {
+  min-height: 290px;
+}
+
 .new_post_form {
   text-align: center;
 }
@@ -95,20 +117,24 @@ table a {
 .new_post_form input {
   width: 30%;
   border: 2px solid orange;
-  border-radius: 10px;
   outline: none;
 }
 
 .new_post_form #post_title {
-  height: 25px;
+  height: 42px;
 }
 
 .new_post_form #post_body {
   height: 230px;
   width: 30%;
   border: 2px solid orange;
-  border-radius: 10px;
   outline: none;
+}
+
+.show_p p{
+  text-align: center;
+  font-size: 22px;
+  line-height: 32px;
 }
 
 .new_post_form .actions input {

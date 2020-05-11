@@ -10,7 +10,7 @@
 <div class="container">
   <div class="row">
     <% @posts.each do |post| %>
-      <div class= "col-md-3">
+      <div class= "col-md-3 style_up">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title author">
@@ -21,9 +21,11 @@
               author: <%= post.user.username %> 
               <% end %>
             </h6>
+
+            <p class="card-text"><%= post.body %></p>
+            <button type="button" class="btn btn-warning">
             <%= link_to 'Show', post , class: "card-link" %>
-            <%= link_to 'Edit', edit_post_path(post), class: "card-link" %>
-            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"card-link" %>
+            </button>
           </div>
         </div>
       </div>
