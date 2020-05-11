@@ -12,23 +12,21 @@
   </head>
 
   <body>
-    <% if flash[:notice] %>
 
-        <p class="notice"><%= notice %></p>
-
-    <% end %>
-
-    <% if flash[:alert] %>
-
-        <p class="alert"><%= alert %></p>
-
-    <% end %>
+  <% if flash[:notice] %>
+  			<p class="notice"><%= notice %></p>
+  	<% end %>
+  	<% if flash[:alert] %>
+  			<p class="alert"><%= alert %></p>
+  	<% end %>
+    
 
     <div class="top_bar">
     <div class = "container">
     <% if user_signed_in? %>
-     
-      <span> <%= current_user.email %> </span>
+    <button type="button" class="btn btn-warning">
+      <span class = "user_email" > <%= current_user.username %> </span>
+    </button>
 
       <button type="button" class="btn btn-warning">
          <%= link_to  "Sign out", destroy_user_session_path, method: :delete %>

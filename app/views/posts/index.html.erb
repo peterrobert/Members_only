@@ -1,37 +1,35 @@
-<p id="notice"><%= notice %></p>
-
 <div class="jumbotron app_header">
 
- <h2> welcome to members only application </h2>
-<div class = "text-center">
-  <%= image_tag "1.png" %>
-</div> 
- 
+  <h2> welcome  to members only application </h2>
+  <div class = "text-center">
+    <%= image_tag "1.png" %>
+  </div> 
+  
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <div class="row">
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %> <% if user_signed_in? %>
-          <span class= "author" >,author:<%= post.user.username %> </span>
-        <% end %></td>
-        
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class= "col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title author">
+            <%= post.title %>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              <% if user_signed_in? %>
+              author: <%= post.user.username %> 
+              <% end %>
+            </h6>
+            <%= link_to 'Show', post , class: "card-link" %>
+            <%= link_to 'Edit', edit_post_path(post), class: "card-link" %>
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"card-link" %>
+          </div>
+        </div>
+      </div>
 
-<br>
+    <% end %>
+  </div>
+</div>
 
 <%= link_to 'New Post', new_post_path , class:"button" %>

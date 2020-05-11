@@ -22,6 +22,12 @@
     border-top: #f5aa22 4px solid;
   }
 
+  .top_bar .user_email{
+    color: #fff;
+    font-family: "Ubuntu", sans-serif;
+    text-transform: capitalize;
+  }
+
   .app_header h2{
     font-family: "Ubuntu", sans-serif;
     text-transform: uppercase;
