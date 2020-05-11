@@ -14,9 +14,32 @@
  *= require_self
  */
 
-body {
-  overflow-x: hidden;
-}
+  body {
+    overflow-x: hidden;
+  }
+
+  .top_bar {
+    border-top: #f5aa22 4px solid;
+  }
+
+  .app_header h2{
+    font-family: "Ubuntu", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .app_header img{
+    margin-top: -50px;
+    height: 380px;
+  }
+
+  .top_bar button {
+    margin-top: 5px;
+  }
+
+  .top_bar button a{
+   color: #fff;
+  }
 
 a {
   font-family: "Ubuntu", sans-serif;
