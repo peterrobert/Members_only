@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %I[show edit update destroy]
-  before_action :authenticate_user!, except: %I[show index]
+  before_action :signed_in_only!, only: %I[new create]
 
   # GET /posts
   # GET /posts.json
@@ -65,6 +65,11 @@ class PostsController < ApplicationController
   private
 
   # Use callbacks to share common setup or constraints between actions.
+
+  def signed_in_only!
+    redirect_to new_user_session_path unless user_signed_in?
+  end
+
   def set_post
     @post = Post.find(params[:id])
   end
