@@ -1,0 +1,34 @@
+<div class="jumbotron app_header">
+
+  <h2> welcome  to members only application </h2>
+  <div class = "text-center">
+    <%= image_tag "1.png" %>
+  </div> 
+  
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @posts.each do |post| %>
+      <div class= "col-md-3 style_up">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title author">
+            <%= post.title %>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              <% if user_signed_in? %>
+              author: <%= post.user.username %> 
+              <% end %>
+            </h6>
+
+            <p class="card-text"><%= post.body %></p>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'New Post', new_post_path , class:"button" %>
